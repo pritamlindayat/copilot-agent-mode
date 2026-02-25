@@ -1,0 +1,110 @@
+
+body {
+  background: linear-gradient(135deg, #e3f0ff 0%, #f9e7ff 100%);
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  color: #2a2a2a;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #4f8cff 0%, #7f53ac 100%) !important;
+  box-shadow: 0 2px 8px rgba(127, 83, 172, 0.08);
+}
+.navbar-brand, .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+.navbar-brand .fw-bold {
+  color: #ffe082;
+}
+.navbar-nav .nav-link.active {
+  color: #ffe082 !important;
+}
+
+/* Headings */
+h1, .display-4, .card-title {
+  color: #7f53ac;
+  font-weight: 700;
+}
+h2, .h5 {
+  color: #4f8cff;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, #7f53ac 0%, #4f8cff 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(127, 83, 172, 0.08);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: linear-gradient(90deg, #4f8cff 0%, #7f53ac 100%);
+  color: #ffe082;
+}
+.btn-outline-secondary {
+  border-color: #7f53ac;
+  color: #7f53ac;
+}
+.btn-outline-secondary:hover, .btn-outline-secondary:focus {
+  background: #7f53ac;
+  color: #fff;
+}
+
+/* Cards */
+.card {
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 4px 24px rgba(127, 83, 172, 0.10);
+}
+.card-header {
+  background: linear-gradient(90deg, #4f8cff 0%, #7f53ac 100%) !important;
+  color: #fff !important;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* Tables */
+.table {
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.table thead {
+  background: #e3f0ff;
+  color: #4f8cff;
+  font-weight: 600;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f9e7ff;
+}
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #e3f0ff;
+}
+
+/* Links */
+a, .App-link {
+  color: #4f8cff;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover, .App-link:hover {
+  color: #7f53ac;
+}
+
+/* Custom logo style */
+.octofit-logo-small {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  margin-right: 0.5rem;
+}
+
+/* Misc */
+.shadow {
+  box-shadow: 0 4px 24px rgba(127, 83, 172, 0.10) !important;
+}
