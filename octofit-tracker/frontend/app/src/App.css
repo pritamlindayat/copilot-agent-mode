@@ -1,110 +1,101 @@
 
 body {
-  background: linear-gradient(135deg, #e3f0ff 0%, #f9e7ff 100%);
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
   min-height: 100vh;
 }
 
 .App {
   text-align: center;
-  color: #2a2a2a;
+  color: #22223b;
 }
 
-/* Navbar */
 .navbar {
-  background: linear-gradient(90deg, #4f8cff 0%, #7f53ac 100%) !important;
-  box-shadow: 0 2px 8px rgba(127, 83, 172, 0.08);
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%) !important;
+  box-shadow: 0 2px 8px rgba(51, 51, 153, 0.08);
 }
 .navbar-brand, .navbar-nav .nav-link {
   color: #fff !important;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
-.navbar-brand .fw-bold {
-  color: #ffe082;
+.navbar-brand img {
+  height: 40px;
+  margin-right: 12px;
+  vertical-align: middle;
 }
 .navbar-nav .nav-link.active {
-  color: #ffe082 !important;
+  color: #ffbe0b !important;
 }
 
-/* Headings */
-h1, .display-4, .card-title {
-  color: #7f53ac;
-  font-weight: 700;
-}
-h2, .h5 {
-  color: #4f8cff;
-  font-weight: 600;
-}
-
-/* Buttons */
-.btn-primary {
-  background: linear-gradient(90deg, #7f53ac 0%, #4f8cff 100%);
-  border: none;
-  color: #fff;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(127, 83, 172, 0.08);
-}
-.btn-primary:hover, .btn-primary:focus {
-  background: linear-gradient(90deg, #4f8cff 0%, #7f53ac 100%);
-  color: #ffe082;
-}
-.btn-outline-secondary {
-  border-color: #7f53ac;
-  color: #7f53ac;
-}
-.btn-outline-secondary:hover, .btn-outline-secondary:focus {
-  background: #7f53ac;
-  color: #fff;
-}
-
-/* Cards */
 .card {
   border-radius: 1rem;
   border: none;
-  box-shadow: 0 4px 24px rgba(127, 83, 172, 0.10);
-}
-.card-header {
-  background: linear-gradient(90deg, #4f8cff 0%, #7f53ac 100%) !important;
-  color: #fff !important;
-  border-radius: 1rem 1rem 0 0;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(51, 51, 153, 0.08);
 }
 
-/* Tables */
+.card-body {
+  padding: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #3a86ff;
+  font-weight: 700;
+}
+
 .table {
-  background: #fff;
+  background: #f8f9fa;
   border-radius: 0.5rem;
   overflow: hidden;
 }
-.table thead {
-  background: #e3f0ff;
-  color: #4f8cff;
+.table th {
+  background: #3a86ff;
+  color: #fff;
   font-weight: 600;
 }
 .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #f9e7ff;
+  background-color: #e0eafc;
 }
-.table-striped > tbody > tr:nth-of-type(even) {
-  background-color: #e3f0ff;
+.table-hover tbody tr:hover {
+  background-color: #bde0fe;
 }
 
-/* Links */
+.btn, .btn-primary {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+}
+.btn:hover, .btn-primary:hover {
+  background: linear-gradient(90deg, #8338ec 0%, #3a86ff 100%);
+  color: #fff;
+}
+
 a, .App-link {
-  color: #4f8cff;
-  text-decoration: underline;
+  color: #8338ec;
+  text-decoration: none;
   transition: color 0.2s;
 }
 a:hover, .App-link:hover {
-  color: #7f53ac;
+  color: #ffbe0b;
 }
 
-/* Custom logo style */
-.octofit-logo-small {
+/* Logo styles */
+.octofit-logo {
   height: 48px;
-  width: 48px;
-  object-fit: contain;
-  margin-right: 0.5rem;
+  margin-right: 16px;
+  vertical-align: middle;
 }
 
-/* Misc */
-.shadow {
-  box-shadow: 0 4px 24px rgba(127, 83, 172, 0.10) !important;
+/* Favicon is handled by public/favicon.ico */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

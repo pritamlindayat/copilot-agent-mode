@@ -1,92 +1,52 @@
 
 
-import OctofitLogoSmall from './OctofitLogoSmall';
+
+import './App.css';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import Activities from './components/Activities';
+import Leaderboard from './components/Leaderboard';
+import Teams from './components/Teams';
+import Users from './components/Users';
+import Workouts from './components/Workouts';
+import logo from './logo.svg';
 
 
 function App() {
   return (
-    <div>
-      {/* Bootstrap Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-gradient bg-primary mb-4 shadow">
-        <div className="container-fluid">
-          <a className="navbar-brand d-flex align-items-center" href="#">
-            <span className="me-2"><OctofitLogoSmall /></span>
-            <span className="fw-bold fs-4">Octofit Tracker</span>
-          </a>
+    <Router>
+      <div className="container mt-4">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary rounded mb-4">
+          <NavLink className="navbar-brand fw-bold d-flex align-items-center" to="/">
+            <img src={logo} alt="Octofit Logo" className="octofit-logo" />
+            Octofit Tracker
+          </NavLink>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Features</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Login</a>
-              </li>
+            <ul className="navbar-nav">
+              <li className="nav-item"><NavLink className="nav-link" to="/activities">Activities</NavLink></li>
+              <li className="nav-item"><NavLink className="nav-link" to="/leaderboard">Leaderboard</NavLink></li>
+              <li className="nav-item"><NavLink className="nav-link" to="/teams">Teams</NavLink></li>
+              <li className="nav-item"><NavLink className="nav-link" to="/users">Users</NavLink></li>
+              <li className="nav-item"><NavLink className="nav-link" to="/workouts">Workouts</NavLink></li>
             </ul>
           </div>
-        </div>
-      </nav>
-
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-md-8">
-            <div className="card shadow mb-4">
-              <div className="card-body text-center">
-                <h1 className="card-title display-4 mb-3">Welcome to <span className="text-primary">Octofit Tracker</span></h1>
-                <p className="card-text lead mb-4">
-                  Track your fitness, join teams, and compete on the leaderboard!
-                </p>
-                <a href="#" className="btn btn-primary btn-lg me-2">Get Started</a>
-                <a href="#" className="btn btn-outline-secondary btn-lg">Learn More</a>
-              </div>
-            </div>
-            {/* Example Bootstrap Table */}
-            <div className="card">
-              <div className="card-header bg-primary text-white">
-                <h2 className="h5 mb-0">Sample Leaderboard</h2>
-              </div>
-              <div className="card-body p-0">
-                <table className="table table-striped mb-0">
-                  <thead className="table-light">
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">User</th>
-                      <th scope="col">Points</th>
-                      <th scope="col">Team</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Alice</td>
-                      <td>1200</td>
-                      <td>Team Rocket</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Bob</td>
-                      <td>1100</td>
-                      <td>Team Alpha</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Charlie</td>
-                      <td>950</td>
-                      <td>Team Rocket</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+        </nav>
+        <div className="card shadow-sm">
+          <div className="card-body">
+            <Routes>
+              <Route path="/activities" element={<Activities />} />
+              <Route path="/leaderboard" element={<Leaderboard />} />
+              <Route path="/teams" element={<Teams />} />
+              <Route path="/users" element={<Users />} />
+              <Route path="/workouts" element={<Workouts />} />
+              <Route path="/" element={<div className="text-center"><h1 className="display-4 mb-3">Welcome to Octofit Tracker!</h1><p className="lead">Track your fitness, join teams, and compete on the leaderboard.</p></div>} />
+            </Routes>
           </div>
         </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
